@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Diagrama PERT</title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    .diagram {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .node {
+      display: grid;
+      grid-template-columns: repeat(3, 40px);
+      grid-template-rows: repeat(3, 40px);
+      border: 2px solid #000;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    .node div {
+      border: 1px solid #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .arrow {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+
+    .label {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Diagrama PERT - Proyecto Android con Firebase e IA</h2>
+
+<div class="diagram">
+  <div class="container">
+    <div class="node">
+      <div>0</div><div>6</div><div>6</div>
+      <div colspan="3">A</div><div colspan="3">Firebase</div>
+      <div>6</div><div>6</div><div>0</div>
+    </div>
+    <div class="label">A</div>
+  </div>
+
+  <div class="arrow">➝</div>
+
+  <div class="container">
+    <div class="node">
+      <div>6</div><div>5</div><div>11</div>
+      <div colspan="3">B</div><div colspan="3">IU</div>
+      <div>6</div><div>11</div><div>0</div>
+    </div>
+    <div class="label">B</div>
+  </div>
+
+  <div class="arrow">➝</div>
+
+  <div class="container">
+    <div class="node">
+      <div>11</div><div>6</div><div>17</div>
+      <div colspan="3">C</div><div colspan="3">Modelo IA</div>
+      <div>11</div><div>17</div><div>0</div>
+    </div>
+    <div class="label">C</div>
+  </div>
+
+  <div class="arrow">➝</div>
+
+  <div class="container">
+    <div class="node">
+      <div>20</div><div>8</div><div>28</div>
+      <div colspan="3">G</div><div colspan="3">Ajustes</div>
+      <div>20</div><div>28</div><div>0</div>
+    </div>
+    <div class="label">G</div>
+  </div>
+</div>
+
+<!-- Puedes agregar más nodos como D, E, F, H en nuevas filas si lo deseas -->
+
+</body>
+</html>
